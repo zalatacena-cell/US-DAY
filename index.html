@@ -6,7 +6,7 @@
 <title>A Letter</title>
 
 <!-- Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500&family=Dancing+Script:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500&family=Dancing+Script:wght@400;500&family=Pacifico&display=swap" rel="stylesheet">
 
 <style>
 /* RESET */
@@ -83,15 +83,15 @@ body {
   transform: rotateX(-160deg);
 }
 
-/* COVER TEXT */
+/* COVER TEXT — playful font applied */
 .envelope-text {
   position: absolute;
   bottom: 25px;
   width: 100%;
   text-align: center;
-  font-family: 'Playfair Display', serif;
-  font-size: 1.2rem;
-  color: #5a3e36;
+  font-family: 'Pacifico', cursive;
+  font-size: 1.3rem;
+  color: #6b3f4a;
   padding: 0 15px;
   transition: opacity 0.6s ease;
 }
@@ -157,50 +157,37 @@ for (let i = 0; i < 30; i++) {
   <div class="envelope" id="envelope">
     <div class="flap"></div>
     <div class="envelope-text">
-      This letter has been waiting for a certain very important someone to open, would you do the honors?💖
+      This letter has been waiting for a certain very important someone to open, would you do the honors? 💖
     </div>
   </div>
 
   <div class="letter">
     <p>I don’t think one letter could ever hold everything I feel — and I’m not trying to make it do that.</p>
-
     <p>I just wanted to mark today, because it matters to me that you exist in my life, and that I know exactly when that started.</p>
-
     <p>The day we met didn’t feel dramatic or loud. It didn’t announce itself as something important.</p>
-
     <p>But it stayed. And the fact that I still remember it — the timing, the feeling, the way you slowly became part of my days — says more than I probably realized back then.</p>
-
     <p>What matters to me now isn’t just that we met, but how you’re here.</p>
-
     <p>How you’re present in my life even when you’re far away.</p>
-
-    <p>Somehow, distance never managed to turn you into something distant. You’re still someone I think of, someone I want to tell things to, someone whose presence feels steady rather than fleeting.</p>
-
+    <p>Somehow, distance never managed to turn you into something distant.</p>
     <p>My days genuinely feel different with you in them — just warmer, and way happier than they used to be.</p>
-
-    <p>Like there’s a quiet understanding running in the background, a sense of being seen and known in a way that doesn’t demand anything, but still means a lot.</p>
-
     <p>I’ve been carrying this for a while, and I didn’t want another important day to pass without you knowing how much you matter to me.</p>
-
-    <p>Not as an apology for anything — just as honesty. Some feelings deserve to be said, not assumed.</p>
-
     <p>So this is me pausing time for a moment and saying:</p>
-
-    <p>I’m grateful for the day we met.<br>
-    I’m grateful that you’re here now.<br>
-    I’m beyond grateful that I’m blessed enough to have you as a part of my daily life.</p>
-
-    <p>To me, this is the day I’ve been blessed.</p>
-
-    <p>And I’m really glad that this date exists, because it gave me a reason to tell you that.</p>
-
     <p><strong>Happy us-day 🤍</strong><br>— Cloudie</p>
   </div>
 </div>
 
+<!-- MUSIC -->
+<audio id="bgm" loop autoplay muted>
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+
 <script>
 function openEnvelope() {
   document.getElementById("envelope").classList.add("open");
+  const music = document.getElementById("bgm");
+  music.muted = false;  // unmute on click
+  music.volume = 0.3;
+  music.play();
 }
 </script>
 
